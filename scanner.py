@@ -1,4 +1,5 @@
-import pyfiglet
+#!/usr/bin/python3
+
 import sys
 import socket
 from datetime import datetime
@@ -15,15 +16,15 @@ else:
     print("Syntax: python3 scanner.py <ip>")
  
 # Add Banner
-print("-" * 50)
+print("_" * 50)
 print("Scanning Target: " + target)
 print("Scanning started at:" + str(datetime.now()))
-print("-" * 50)
+print("_" * 50)
   
 try:
      
-    # will scan ports between 60 to 85
-    for port in range(60,85):
+    # will scan ports between 1 to 65,535
+    for port in range(1,65535):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
          
